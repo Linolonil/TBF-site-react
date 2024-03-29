@@ -1,0 +1,50 @@
+/* Fontes */
+@font-face {
+  font-family: 'MyVikingFont_sobre';
+  src: url('../../assets/font/VikingNormal-36VL.otf') format('woff2');
+ }
+
+ 
+ .sobre {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: calc(1vh + 45px) 0;
+ }
+
+  .sobre_card {
+    width: 90%;
+    padding: 10px;
+    border: 20px solid;
+    border-image: url('../../../public/borda.png') 50 round;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+   }
+
+   .sobre h2 {
+    font-family: 'MyVikingFont_sobre', Fallback, sans-serif;
+    margin-bottom: 30px;
+    color: #000;
+   }
+    
+ .intro_text_tbf, .red {
+  color: #b30000ba;
+  filter: drop-shadow(0 0 2px #b30000);
+ }
+ 
+ 
+
+ @media screen and (max-width: 1080px) {
+ 
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 430px) {
+ 
+}

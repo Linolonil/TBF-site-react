@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'MyVikingFont_cards_text';
+  src: url('../../assets/font/VikingNormal-36VL.otf') format('woff2');
+}
+
+.cards {
+  width: 100%;
+  padding: 30px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 20px solid;
+  gap: 40px 0;
+  border-image: url('../../../public/borda.png') 50 round;
+}
+
+.card {
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  perspective: 2500px;
+  
+}
+
+.cover_image {
+  height: calc(20rem - 7px);
+  width:calc(15rem - 7px);
+  object-fit: fill;
+  border-radius: 3rem  3rem 0 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  transition: all .5s;
+  position: absolute;
+  z-index: -1;
+  border-radius: 3rem;
+  box-sizing: border-box;
+}
+
+.card:hover .wrapper {
+  transform: perspective(1000px)  rotatex(25deg) ;
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before, .wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: calc(20% - 10px);
+  transition: all .5s;
+  position: absolute;
+  left: 0;
+  
+}
+
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-color: linear-gradient(to top, rgba(12, 13, 19, 0.993) 68%, rgba(12,13,19) 97%);
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter:  blur(5px);
+    border-radius: 3rem  3rem 0 0;
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom, rgba(12,13,19,0.5)68%, rgba(12,13,19)97%);
+}
+
+.card:hover .wrapper::before, .wrapper::after {
+  opacity: 1;
+
+}
+
+.title {
+  width: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform .5s, opacity ease-in-out .6s;
+  font-family: 'MyVikingFont_cards_text', Fallback, sans-serif;
+}
+
+.title_position {
+  width: 50%;
+  margin-bottom: 5px;
+  text-align: center;
+  display: none;
+  font-family: 'MyVikingFont_cards_text', Fallback, sans-serif;
+  transition: transform 5s, opacity ease-in-out .6s;
+}
+
+.card:hover .title_position {
+  display: block;
+  margin-bottom: 20px;
+
+}
+
+.card:hover .title {
+  display: none;
+  transition: opacity ease-in-out 6s;
+
+}
+
+ .title_position::first-letter, .title span::first-letter {
+  color: red;
+}
+
+.character {
+  width: 80%;
+  height: 50%;
+  object-fit: fill;
+  opacity: 0;
+  border: 1px solid transparent;
+  border-radius: 0.5rem  0.5rem 0 0;
+  transition: all .5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;  
+  border: 1px solid transparent;
+  border-radius: 0.5rem  0.5rem 0 0;
+  transform: translate3d(0%, -30%, 100px);
+  margin-bottom: calc(10% + 10px);
+
+}
+ 
+
+ @media screen and (max-width: 1080px) {
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 430px) {
+ 
+}
