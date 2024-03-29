@@ -4,95 +4,95 @@
     "nome": "Limoeiro",
     "funcao": "ALL LANES",
     "elo": "esmeralda",
-    "champion": "../../../public/champion/maokai.jpg"  ,
-    "imagem": "../../../public/criminosos/Eu.png"
+    "champion": "/champion/maokai.jpg"  ,
+    "imagem": "/criminosos/Eu.png"
   },
   {
     "id": 2,
     "nome": "Aiox",
     "funcao": "MID/ADC",
     "elo": "diamante",
-    "champion": "../../../public/champion/anivia.jpg"  ,
-    "imagem": "../../../public/criminosos/Aiox.jpg"
+    "champion": "/champion/anivia.jpg"  ,
+    "imagem": "/criminosos/Aiox.jpg"
   },
   {
     "id": 3,
     "nome": "Pira",
     "funcao": "ALL LANES",
     "elo": "ouro",
-    "champion": "../../../public/champion/amumu.jpg"  ,
-    "imagem": "../../../public/criminosos/pira.jpg"
+    "champion": "/champion/amumu.jpg",
+    "imagem": "/criminosos/pira.jpg"
   },
   {
     "id": 4,
     "nome": "Thales",
     "funcao": "ADC/SUP",
     "elo": "ouro",
-    "champion": "../../../public/champion/lucian.jpg"  ,
-    "imagem": "../../../public/criminosos/Eu.png"
+    "champion": "/champion/lucian.jpg"  ,
+    "imagem": "/criminosos/Eu.png"
   },
   {
     "id": 5,
     "nome": "Lari",
     "funcao": "SUP",
     "elo": "ouro",
-    "champion": "../../../public/champion/galio.jpg"  ,
-    "imagem": "../../../public/criminosos/Eu.png"
+    "champion": "/champion/galio.jpg"  ,
+    "imagem": "/criminosos/Eu.png"
   },
   {
     "id": 6,
     "nome": "Marconha",
     "funcao": "ADC/JG",
     "elo": "esmeralda",
-    "champion": "../../../public/champion/kindred.jpg"  ,
-    "imagem": "../../../public/criminosos/marconha.jpg"
+    "champion": "/champion/kindred.jpg",
+    "imagem": "/criminosos/marconha.jpg"
   },
   {
     "id": 7,
     "nome": "Brayan",
     "funcao": "JG",
     "elo": "ouro",
-    "champion": "../../../public/champion/rammus.jpg"  ,
-    "imagem": "../../../public/criminosos/Braia.jpg"
+    "champion": "/champion/rammus.jpg"  ,
+    "imagem": "/criminosos/Braia.jpg"
   },
   {
     "id": 8,
     "nome": "Kraudin",
     "funcao": "JG",
     "elo": "esmeralda",
-    "champion": "../../../public/champion/nunu.jpg"  ,
-    "imagem": "../../../public/criminosos/Eu.png"
+    "champion": "/champion/nunu.jpg"  ,
+    "imagem": "/criminosos/Eu.png"
   },
   {
     "id": 9,
     "nome": "Nakawak",
     "funcao": "ADC",
     "elo": "platina",
-    "champion": "../../../public/champion/rato.jpg"  ,
-    "imagem": "../../../public/criminosos/Eu.png"
+    "champion": "/champion/rato.jpg"  ,
+    "imagem": "/criminosos/Eu.png"
   },
   {
     "id":10,
     "nome": "Gar",
     "funcao" : "TOP/ADC",
     "elo": "platina",
-    "champion": "../../../public/champion/trundle.jpg"  ,
-    "imagem": "../../../public/criminosos/gar.jpg"
+    "champion": "/champion/trundle.jpg"  ,
+    "imagem": "/criminosos/gar.jpg"
   },
   {
     "id":11,
     "nome": "Natália",
     "funcao" : "ADC/SUP",
     "elo": "platina",
-    "champion": "../../../public/champion/xayah.jpg"  ,
-    "imagem": "../../../public/criminosos/natalia.jpg"
+    "champion": "/champion/xayah.jpg"  ,
+    "imagem": "/criminosos/natalia.jpg"
   },
   {
     "id":12,
     "nome": "Willzada",
     "funcao" : "SUP",
     "elo": "ouro",
-    "champion": "../../../public/champion/zyra.jpg"  ,
-    "imagem": "../../../public/criminosos/will.jpg"
+    "champion": "/champion/zyra.jpg"  ,
+    "imagem": "/criminosos/will.jpg"
   }
 ]
