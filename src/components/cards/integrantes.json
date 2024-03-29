@@ -5,7 +5,7 @@
     "funcao": "ALL LANES",
     "elo": "esmeralda",
     "champion": "./public/champion/maokai.jpg"  ,
-    "imagem": "./public/criminosos/Eu.png"
+    "imagem": "../../../public/criminosos/Eu.png"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "funcao": "MID/ADC",
     "elo": "diamante",
     "champion": "./public/champion/anivia.jpg"  ,
-    "imagem": "./public/criminosos/Aiox.jpg"
+    "imagem": "../../../public/criminosos/Aiox.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "funcao": "ALL LANES",
     "elo": "ouro",
     "champion": "./public/champion/amumu.jpg"  ,
-    "imagem": "./public/criminosos/pira.jpg"
+    "imagem": "../../../public/criminosos/pira.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "funcao": "ADC/SUP",
     "elo": "ouro",
     "champion": "./public/champion/lucian.jpg"  ,
-    "imagem": "./public/criminosos/Eu.png"
+    "imagem": "../../../public/criminosos/Eu.png"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "funcao": "SUP",
     "elo": "ouro",
     "champion": "./public/champion/galio.jpg"  ,
-    "imagem": "./public/criminosos/Eu.png"
+    "imagem": "../../../public/criminosos/Eu.png"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "funcao": "ADC/JG",
     "elo": "esmeralda",
     "champion": "./public/champion/kindred.jpg"  ,
-    "imagem": "./public/criminosos/marconha.jpg"
+    "imagem": "../../../public/criminosos/marconha.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "funcao": "JG",
     "elo": "ouro",
     "champion": "./public/champion/rammus.jpg"  ,
-    "imagem": "./public/criminosos/Braia.jpg"
+    "imagem": "../../../public/criminosos/Braia.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "funcao": "JG",
     "elo": "esmeralda",
     "champion": "./public/champion/nunu.jpg"  ,
-    "imagem": "./public/criminosos/Eu.png"
+    "imagem": "../../../public/criminosos/Eu.png"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "funcao": "ADC",
     "elo": "platina",
     "champion": "./public/champion/rato.jpg"  ,
-    "imagem": "./public/criminosos/Eu.png"
+    "imagem": "../../../public/criminosos/Eu.png"
   },
   {
     "id":10,
@@ -77,7 +77,7 @@
     "funcao" : "TOP/ADC",
     "elo": "platina",
     "champion": "./public/champion/trundle.jpg"  ,
-    "imagem": "./public/criminosos/gar.jpg"
+    "imagem": "../../../public/criminosos/gar.jpg"
   },
   {
     "id":11,
@@ -85,7 +85,7 @@
     "funcao" : "ADC/SUP",
     "elo": "platina",
     "champion": "./public/champion/xayah.jpg"  ,
-    "imagem": "./public/criminosos/natalia.jpg"
+    "imagem": "../../../public/criminosos/natalia.jpg"
   },
   {
     "id":12,
@@ -93,6 +93,6 @@
     "funcao" : "SUP",
     "elo": "ouro",
     "champion": "./public/champion/zyra.jpg"  ,
-    "imagem": "./public/criminosos/will.jpg"
+    "imagem": "../../../public/criminosos/will.jpg"
   }
 ]
