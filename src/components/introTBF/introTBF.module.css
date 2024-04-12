@@ -1,92 +1,23 @@
-@font-face {
-  font-family: 'MyVikingFont_intro';
-  src: url('../../assets/font/SecondVikingLetter.otf') format('woff2');
-}
+.IntroTBF {
+  background-image: url('./back-transformed.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-color: rgba(0, 0, 0, 0.6); /* bg-black/60 */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+  transition: background-image ease-in-out 3000ms;
 
-.intro{
-  width: 100%; 
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  }
-  
-  .intro_viking {
-    width: calc(2em + 20vw);
-    box-sizing: border-box;
-    filter: drop-shadow(0 10px 10px #fff);
-    transition:filter .5s ease-in-out; 
-  }
-  
-  .intro_viking:hover {
-    box-sizing: border-box;
-    filter: drop-shadow(0 10px 10px #b30000);
-    transition: background-color ease-in-out .5s, filter ease-in-out .6s;
-    cursor: pointer;
-  }
-  
-  .intro_text_subtitle{
-    font-family: 'MyVikingFont_intro', Fallback, sans-serif ;
-    font-size: calc(2em + 5vw);
-    font-weight: bold;
-    color: #000000e8;
-    padding: 10px;
-  }
-  
-  .intro_text_tbf{
-    color:#b30000ba;
-    filter: drop-shadow(0.5px 1px 4px  #b30000);
-
-  }
-  
-@media screen and (max-width: 1080px) {
-  .intro{
-    height: 100vh;
-    gap: 90px;
-  }
-  .intro_viking{
-    width: calc(2rem + 65vw);
-  } 
-  .intro_text_subtitle{
-    font-size: calc(1rem + 20vw);
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .intro{
-    height: 100vh;
-
-    width: 100%;
-
-    gap: 80px;
-  }
-
-  .intro_viking{
-    width: calc(10rem + 25vw);
-    
-  } 
-  .intro_text_subtitle{
-    font-size: calc(3rem + 15vw);
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .intro{
-    height: 100vh;
-    gap: 60px;
-  }
-
-  .intro_viking{
-    width: calc(10rem + 30vw);
-    
-  } 
-  .intro_text_subtitle{
-    font-size: calc(3rem + 10vw);
-    text-align: center;
-
+  /* Adicionando classes condicionais */
+  @media (min-width: 640px) {
+    background-color: rgba(0, 0, 0, 0.8); /* lg:bg-black/80 */
+    background-attachment: fixed; /* lg:bg-fixed */
+    top: 0; /* top-0 */
+    background-clip: padding-box; /* bg-clip-padding */
+    background-origin: content-box; /* bg-origin-content */
+    background-position: center; /* bg-center */
+    background-size: cover; /* bg-cover */
+    background-repeat: no-repeat; /* bg-no-repeat */
+    background-blend-mode: multiply; /* bg-blend-multiply */
   }
 }

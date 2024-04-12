@@ -1,6 +1,7 @@
 import { useState } from "react";
 import viking from "../../assets/viking.png";
 import MusicPlayer from "../musicaIntro";
+import style from './IntroTBF.module.css'
 
 function IntroTBF() {
   const [play, setPlay] = useState(false);
@@ -10,7 +11,7 @@ function IntroTBF() {
   }
 
   return (
-    <header className={`h-[100vh] w-full flex justify-center items-center flex-col lg:flex-row gap-11 bg-black/60 lg:bg-black/80 bg-hero-pattern lg:bg-fixed top-0 bg-clip-padding bg-origin-content bg-center bg-cover bg-no-repeat bg-blend-multiply shadow-2xl ${window.innerWidth < 768 ? 'order-first' : ''} ${window.innerWidth < 640 ? 'order-first' : ''}`} >
+    <header  className={`h-[100vh] w-full flex justify-center items-center flex-col lg:flex-row gap-11 bg-black/60 lg:bg-black/80  lg:bg-fixed top-0 bg-clip-padding bg-origin-content bg-center bg-cover bg-no-repeat bg-blend-multiply shadow-2xl ${window.innerWidth < 768 ? 'order-first' : ''} ${window.innerWidth < 640 ? 'order-first' : ''} ${style.IntroTBF}`} >
       <MusicPlayer startMusic={play} />
       <img
         className="
