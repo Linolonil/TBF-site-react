@@ -1,16 +1,25 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  @font-face {
+    font-family: 'MyVikingFont';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./assets/font/SecondVikingLetter.otf') format('woff2');
+  }
+  @font-face {
+    font-family: 'MyVikingFont_title';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./assets/font/SecondVikingLetter.otf') format('woff2');
+  }
 }
+
+
 
 *{
   margin: 0;

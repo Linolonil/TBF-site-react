@@ -3,7 +3,6 @@
   src: url('../../assets/font/VikingNormal-36VL.otf') format('woff2');
  }
 
- /* Texto Sobre */
  .sobre_text_card {
   display: flex;
   justify-content: center;
@@ -13,6 +12,10 @@
  }
  
  .sobre_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
  }
  
@@ -22,6 +25,8 @@
   line-height: 2;
   color: #333;
   text-align: justify;
+  text-indent: 25px;
+
  }
  
  
@@ -34,14 +39,15 @@
  
  .autor {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
+
   
 }
 
  .autor button {
-   width: 14rem;
+   width: auto;
    padding: 15px;
-   margin-left: 30px;
    font-size: 15px;
    color: rgb(255, 247, 247);
    font-family: 'MyVikingFont_cardsTexts_text', Fallback, sans-serif;
@@ -62,22 +68,51 @@
  
  @media screen and (max-width: 1080px) {
   .sobre_text p {
-    font-size: 1rem;
-    line-height: 2;
-
-   }
+    font-size: 1.5rem; /* Tamanho da fonte ajustado para 1.5rem */
+    line-height: 1.8; /* Altura da linha ajustada para 1.8 */
+  }
+  .autor button{
+    font-size: 30px;
+    padding: 30px;
+  
+  }
+  
+ .sobre_text_card {
+  padding:15px;
+ }
 }
+
 @media screen and (max-width: 768px) {
   .sobre_text p {
     font-size: 1rem;
-    line-height: 2;
+    line-height: 1.6;
+  }
+  .autor button{
+    font-size: 20px;
+    padding: 30px;
+    border: 1px solid red;
+  
+    border: 1px solid red;
 
-   }
+  }
+  
+ .sobre_text_card {
+  padding: 10px;
+ }
 }
+
 @media screen and (max-width: 430px) {
   .sobre_text p {
-    font-size: 1rem;
-    line-height: 2;
-
-   }
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+  .autor button{
+    font-size: 15px;
+    padding: 15px;
+  
+  }
+  
+ .sobre_text_card {
+  padding: 5px;
+ }
 }

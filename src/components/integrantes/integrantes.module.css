@@ -18,15 +18,13 @@
 }
 
 .integrantes_card{
-  width: 90%;
-  display: flex;
-
- 
-  display: flex;
+  width: 97%;
+  display: flex; 
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
+
 }
 
 .integrantes_title {
@@ -44,3 +42,21 @@
   filter: drop-shadow(0.5px 1px 4px  #b30000);
 
 }
+
+
+@media screen and (max-width: 1080px) {
+  .integrantes_title h2{
+   font-size: 40px;
+  }
+
+ }
+ @media screen and (max-width: 768px) {
+  .integrantes_title h2{
+     font-size: 35px;
+    }
+ }
+ @media screen and (max-width: 430px) {
+   .integrantes_title h2{
+     font-size: 30px;
+    }
+ }

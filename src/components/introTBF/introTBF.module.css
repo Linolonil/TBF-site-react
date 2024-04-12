@@ -18,9 +18,7 @@
     box-sizing: border-box;
     filter: drop-shadow(0 10px 10px #fff);
     transition:filter .5s ease-in-out; 
-    
   }
-  
   
   .intro_viking:hover {
     box-sizing: border-box;
@@ -28,7 +26,6 @@
     transition: background-color ease-in-out .5s, filter ease-in-out .6s;
     cursor: pointer;
   }
-
   
   .intro_text_subtitle{
     font-family: 'MyVikingFont_intro', Fallback, sans-serif ;
@@ -50,7 +47,7 @@
     gap: 90px;
   }
   .intro_viking{
-    width: calc(2rem + 50vw);    
+    width: calc(2rem + 65vw);
   } 
   .intro_text_subtitle{
     font-size: calc(1rem + 20vw);

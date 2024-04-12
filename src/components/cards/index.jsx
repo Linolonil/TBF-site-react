@@ -1,24 +1,46 @@
-import style from './cards.module.css'
-import integrantesData from './integrantes.json'
+import { useState, useEffect } from "react";
+import styles from "./cards.module.css"; // Importando o módulo de estilo
+import axios from "axios";
+import CardIntegrantes from "../cardIntegrantes";
 
-export default function Cards (){
-  
-  return(
-    <div className={style.cards}>
-    {integrantesData.sort((a, b) => a.nome.localeCompare(b.nome)) 
-  .map((integrante) => (
-      <div
-        key={integrante.id}
-        className={style.card}
-      >
-        <div className={style.wrapper} >
-          <img src={integrante.imagem} className={style.cover_image}  alt={integrante.nome} />
+export default function Cards() {
+  const [integrantesData, setIntegrantesData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); 
+
+  const apiBuscaInfo = import.meta.env.VITE_API_INFO
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setTimeout(async () => {
+          const response = await axios.get(apiBuscaInfo);
+          setIntegrantesData(response.data);
+          setIsLoading(false);
+        });
+      } catch (error) {
+        console.error("Erro ao buscar informações:", error);
+      }
+
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div className={`${styles.container} w-full h-auto p-2.5 flex justify-center items-center flex-wrap gap-7 box-border bg-transparent`}>
+      {isLoading ? (
+        <div className="flex justify-center items-center h-20 text-lg text-gray-500">
+          Carregando cards...
         </div>
-        <img src={integrante.champion} className={style.character} alt={integrante.nome}/>
-        <h4 className={style.title}><span>{integrante.nome}</span></h4>
-        <h4 className={style.title_position}>{integrante.funcao}</h4>
-        </div>
-    ))}
-  </div>
-  )
+      ) : (
+        integrantesData
+          .sort((a, b) => a.nome.localeCompare(b.nome))
+          .map((integrante) => (
+            <div key={integrante.id}>
+              <CardIntegrantes name={integrante.nome} funcao={integrante.funcao} imagem={integrante.image} champion={integrante.champion} />
+            </div>
+          ))
+      )}
+    </div>
+  );
 }

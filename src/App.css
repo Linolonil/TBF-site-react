@@ -1,9 +1,15 @@
-.container_global {
-    background: url('../public/back.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: theme('borderColor.DEFAULT', currentColor);
 }
+
 
 /* global.css */
 

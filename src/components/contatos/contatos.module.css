@@ -15,7 +15,7 @@
 }
 
 .contatos_card{
-  width: 90%;
+  width: 97%;
   padding: 30px;
 
   border: 20px solid;
@@ -73,18 +73,30 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .contatos_card{
+    border: 60px solid;
+    border-image: url('../../../public/borda.png') 50 round;
+  }
   .contatos_list{
     flex-direction: column;
     gap: 50px;
   }
 }
 @media screen and (max-width: 768px) {
+  .contatos_card{
+    border: 40px solid;
+    border-image: url('../../../public/borda.png') 50 round;
+  }
   .contatos_list{
     flex-direction: column;
     gap: 50px;
   }
 }
 @media screen and (max-width: 430px) {
+  .contatos_card{
+    border: 30px solid;
+    border-image: url('../../../public/borda.png') 50 round;
+  }
   .contatos_list{
     flex-direction: column;
     gap: 50px;
