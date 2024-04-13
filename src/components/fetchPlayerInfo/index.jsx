@@ -28,13 +28,16 @@ export default function InfoKdaIndividual({
           
           if (lastAccessDate !== today) {
             const apiUrlUpdate = import.meta.env.VITE_API_URL_UPDATE_ENV
-            await axios.get(apiUrlUpdate);
+            console.log(apiUrlUpdate)
+            await axios.get(`${apiUrlUpdate}${id}`);
             // Marca a data do último acesso no localStorage para este card
             localStorage.setItem(`lastAccessDate_${id}`, today);
           }
 
           const apiUrlKda = import.meta.env.VITE_API_URL_KDA_ENV ;
-          const responseKda = await axios.get(apiUrlKda);
+
+          console.log(apiUrlKda)
+          const responseKda = await axios.get(`${apiUrlKda}${id}`);
 
           if (responseKda.data) {
             const sortedPartidas = responseKda.data.partidas.sort((a, b) => {

@@ -11,9 +11,10 @@ export default function DesempenhoLol() {
   const [totalAssists, setTotalAssists] = useState(0);
   const [totalPartidas, setTotalPartidas] = useState(0);
   const apiBuscaInfoKda = import.meta.env.VITE_API_INFO_KDA
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        
           const response = await fetch(apiBuscaInfoKda);
           
           if (!response.ok) {
@@ -39,8 +40,8 @@ export default function DesempenhoLol() {
       let totalPartidas = 0;
 
       matchDetails.map((player) => {
-         totalPartidas += player.partidas[0].length || 0;
-        player.partidas[0].map((kda)=>{
+         totalPartidas += player.partidas.length || 0;
+        player.partidas.map((kda)=>{
           totalKills += kda.kda.kills || 0;
           totalDeaths += kda.kda.deaths || 0;
           totalAssists += kda.kda.assists || 0;
