@@ -16,6 +16,7 @@ export default function Home(){
        <DesempenhoLol/>
       <Contatos/>
        <Footer/>
+
   </>
   )
 }

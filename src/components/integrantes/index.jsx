@@ -10,6 +10,7 @@ export default function Integrantes() {
         <h2 className=" w-full h=[20%] font-MyVikingFont font-semibold uppercase pt-10 first-letter:text-red-500 text-5xl lg:text-4xl md:text-6xl md:font-bold md:mt-10 md:text-center text-white">Integrantes</h2>
         </div>
         <Cards className="border"/>
+
       </div>
     </section>
   );

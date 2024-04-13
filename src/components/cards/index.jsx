@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import styles from "./cards.module.css"; // Importando o módulo de estilo
 import axios from "axios";
 import CardIntegrantes from "../cardIntegrantes";
 
@@ -26,8 +25,9 @@ export default function Cards() {
     fetchData();
   }, []);
 
+
   return (
-    <div className={`${styles.container} w-full h-auto p-2.5 flex justify-center items-center flex-wrap gap-7 box-border bg-transparent`}>
+    <div className={` w-full h-auto p-2.5 flex justify-center items-center flex-wrap gap-7 box-border bg-transparent`}>
       {isLoading ? (
         <div className="flex justify-center items-center h-20 text-lg text-gray-500">
           Carregando cards...
@@ -37,7 +37,7 @@ export default function Cards() {
           .sort((a, b) => a.nome.localeCompare(b.nome))
           .map((integrante) => (
             <div key={integrante.id}>
-              <CardIntegrantes name={integrante.nome} funcao={integrante.funcao} imagem={integrante.image} champion={integrante.champion} />
+              <CardIntegrantes id={integrante.id} name={integrante.nome} funcao={integrante.funcao} imagem={integrante.image} champion={integrante.champion} />
             </div>
           ))
       )}
