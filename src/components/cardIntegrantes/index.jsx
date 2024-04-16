@@ -29,7 +29,7 @@ export default function CardIntegrantes({id, name, funcao ,imagem ,champion }) {
         <div className={styles.card_back} style={{ backgroundImage: `url(${champion})`}}>
           <div className={styles.back_title}>{name}</div>
           <div className={styles.movie_description}>
-            <span>descricao: </span>{funcao}
+            {funcao}
           </div>
           <div className={styles.genre}></div>
           <a  className={styles.btn} onClick={abrirModal}>desempenho individual</a>

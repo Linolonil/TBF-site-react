@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import axios from "axios";
 
 export default function InfoKdaIndividual({
@@ -15,8 +12,6 @@ export default function InfoKdaIndividual({
   const [loading, setLoading] = useState(false);
   const [dataLoaded, setDataLoaded] = useState(false);
 
-
-
   useEffect(() => {
     if (openModal && !dataLoaded) {
       setLoading(true);
@@ -25,18 +20,17 @@ export default function InfoKdaIndividual({
         try {
           const lastAccessDate = localStorage.getItem(`lastAccessDate_${id}`);
           const today = new Date().toLocaleDateString();
-          
+
           if (lastAccessDate !== today) {
-            const apiUrlUpdate = import.meta.env.VITE_API_URL_UPDATE_ENV
-            console.log(apiUrlUpdate)
+            const apiUrlUpdate = import.meta.env.VITE_API_URL_UPDATE_ENV;
+            console.log(apiUrlUpdate);
             await axios.get(`${apiUrlUpdate}${id}`);
-            // Marca a data do último acesso no localStorage para este card
             localStorage.setItem(`lastAccessDate_${id}`, today);
           }
 
-          const apiUrlKda = import.meta.env.VITE_API_URL_KDA_ENV ;
+          const apiUrlKda = import.meta.env.VITE_API_URL_KDA_ENV;
 
-          console.log(apiUrlKda)
+          console.log(apiUrlKda);
           const responseKda = await axios.get(`${apiUrlKda}${id}`);
 
           if (responseKda.data) {
@@ -53,47 +47,12 @@ export default function InfoKdaIndividual({
               partidas: sortedPartidas.slice(0, 10),
             });
 
-            if (responseKda.data.nickName === "Bittencourt") {
-              toast(`Dados do Benicio`, {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                });
-            } else {
-              toast(`Dados ${responseKda.data.nickName}`, {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                });
-            }
-
             setDataLoaded(true);
           } else {
             console.error("Dados do jogador não encontrados");
-            toast.error("Dados do jogador não encontrados");
           }
         } catch (error) {
           console.error("Erro ao buscar informações do jogador:", error);
-          toast(`Erro ao buscar Dados`, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            });
         } finally {
           setLoading(false);
         }
@@ -103,12 +62,10 @@ export default function InfoKdaIndividual({
     }
   }, [id, openModal, dataLoaded]);
 
- 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString();
   };
-
 
   return (
     <>
@@ -117,8 +74,16 @@ export default function InfoKdaIndividual({
           <div className="bg-black w-full h-full rounded-[20px]">
             <div className="overflow-y-auto h-full">
               {loading && (
-                <div className="absolute inset-0 bg-black flex items-center justify-center   z-10">
-                  <div className="loader">Carregando</div>
+                <div className="absolute inset-0 bg-black flex items-center justify-center rounded-[20px] z-10">
+                  <div className="loader">
+                    <div className="loader_square"></div>
+                    <div className="loader_square"></div>
+                    <div className="loader_square"></div>
+                    <div className="loader_square"></div>
+                    <div className="loader_square"></div>
+                    <div className="loader_square"></div>
+                    <div className="loader_square"></div>
+                  </div>
                 </div>
               )}
               {playerInfo && !loading && (
@@ -132,8 +97,12 @@ export default function InfoKdaIndividual({
                       <thead>
                         <tr>
                           <th className="border px-4 py-2 text-center">Data</th>
-                          <th className="border px-4 py-2 text-center">K/D/A</th>
-                          <th className="border px-4 py-2 text-center">Média</th>
+                          <th className="border px-4 py-2 text-center">
+                            K/D/A
+                          </th>
+                          <th className="border px-4 py-2 text-center">
+                            Média
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -149,7 +118,9 @@ export default function InfoKdaIndividual({
                             <td className="border px-4 py-2 text-center">
                               {(
                                 (partida.kda.kills + partida.kda.assists) /
-                                ((partida.kda.deaths == 0) ? 1 : partida.kda.deaths) 
+                                (partida.kda.deaths == 0
+                                  ? 1
+                                  : partida.kda.deaths)
                               ).toFixed(2)}
                             </td>
                           </tr>

@@ -36,7 +36,7 @@ function IntroTBF() {
       bg-clip-text text-transparent bg-gradient-to-r from-gray-800/90 to-red-800
       p-[10px] 
       text-center
-      ">
+      " translate="no">
         <span className="text-red-600  drop-shadow-red"> ṭ</span>he
         <span className="text-red-600   drop-shadow-red"> B</span>ig
         <span className="text-red-600   drop-shadow-red"> F</span>riends

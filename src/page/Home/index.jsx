@@ -14,7 +14,7 @@ export default function Home(){
        <Sobre/>
        <Integrantes/>
        <DesempenhoLol/>
-      <Contatos/>
+       <Contatos/>
        <Footer/>
 
   </>
